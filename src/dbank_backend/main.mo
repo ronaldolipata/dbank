@@ -3,7 +3,7 @@ import Time "mo:base/Time";
 import Float "mo:base/Float";
 
 actor DBank {
-  var currentValue: Float = 300;
+  stable var currentValue: Float = 300;
 
   public func topUp(amount: Float) {
     currentValue += amount;
