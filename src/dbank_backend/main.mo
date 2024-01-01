@@ -4,6 +4,7 @@ import Float "mo:base/Float";
 
 actor DBank {
   stable var currentValue: Float = 300;
+  stable var starTime = Time.now();
 
   public func topUp(amount: Float) {
     currentValue += amount;
@@ -23,5 +24,13 @@ actor DBank {
 
   public query func checkBalance(): async Float {
     return currentValue;
+  };
+
+  public func compound() {
+    let currentTime = Time.now();
+    let timeElapseNS = currentTime - starTime;
+    let timeElapseS = timeElapseNS / 1000000000;
+    currentValue := currentValue * (1.01 ** Float.fromInt(timeElapseS));
+    starTime := currentTime;
   };
 }
