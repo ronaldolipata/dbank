@@ -1,25 +1,22 @@
-# Vite + React + Motoko
+# DBANK - A Decentralized Bank
 
-### Get started directly in your browser:
+This project allows the Users to top up, withdraw, check balance, and compound interest.
+Live Demo: https://ronaldolipata.github.io/dbank/
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rvanasa/dbank)
-
-This template gives you everything you need to build a full-stack Web3 application on the [Internet Computer](https://internetcomputer.org/).
-
-For an example of a real-world dapp built using this starter project, check out the [source code](https://github.com/dfinity/feedback) for DFINITY's [Developer Experience Feedback Board](https://dx.internetcomputer.org/).
-
-## 📦 Create a New Project
+## To run the project
 
 Make sure that [Node.js](https://nodejs.org/en/) `>= 16` and [`dfx`](https://internetcomputer.org/docs/current/developer-docs/build/install-upgrade-remove) `>= 0.14` are installed on your system.
 
 Run the following commands in a new, empty project directory:
 
 ```sh
-npx degit rvanasa/dbank # Download this starter project
 dfx start --clean --background # Run dfx in the background
+
 npm run setup # Install packages, deploy canisters, and generate type bindings
 
 npm start # Start the development server
+
+dfx deploy # Run when there are changes made to the backend
 ```
 
 When ready, run `dfx deploy --network ic` to deploy your application to the Internet Computer.
@@ -50,3 +47,7 @@ When ready, run `dfx deploy --network ic` to deploy your application to the Inte
 - Reduce the latency of update calls by passing the `--emulator` flag to `dfx start`.
 - Install a Motoko package by running `npx ic-mops add <package-name>`. Here is a [list of available packages](https://mops.one/).
 - Split your frontend and backend console output by running `npm run frontend` and `npm run backend` in separate terminals.
+
+## Template Credits
+
+This project uses a template from [Template Repository]([https://github.com/template-repo](https://github.com/rvanasa/vite-react-motoko)). I extend our gratitude to the contributors and maintainers of this repository for their work, which served as the foundation for the project.
