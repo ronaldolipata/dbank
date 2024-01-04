@@ -8,6 +8,7 @@ dotenv.config();
 
 export default defineConfig({
   root: 'src',
+  base: '/dbank/',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
