@@ -1,5 +1,5 @@
 import './App.css';
-import { backend } from './declarations/backend';
+// import { backend } from './declarations/backend';
 
 function App() {
   return (
