@@ -52,4 +52,4 @@ When ready, run `dfx deploy --network ic` to deploy your application to the Inte
 
 ## Template Credits
 
-This project uses a template from [Template Repository](https://github.com/rvanasa/vite-react-motoko). I extend our gratitude to the contributors and maintainers of this repository for their work, which served as the foundation for the project.
+This project uses a template from [vite-react-motoko by Ryan Vandersmith](https://github.com/rvanasa/vite-react-motoko). I extend our gratitude to the contributors and maintainers of this repository for their work, which served as the foundation for the project.
