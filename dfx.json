@@ -1,29 +1,20 @@
 {
   "canisters": {
-    "dbank_backend": {
-      "main": "src/dbank_backend/main.mo",
-      "type": "motoko"
+    "backend": {
+      "type": "motoko",
+      "main": "backend/Backend.mo"
     },
-    "dbank_frontend": {
-      "dependencies": [
-        "dbank_backend"
-      ],
-      "frontend": {
-        "entrypoint": "src/dbank_frontend/src/index.html"
-      },
-      "source": [
-        "src/dbank_frontend/assets",
-        "dist/dbank_frontend/"
-      ],
-      "type": "assets"
+    "frontend": {
+      "dependencies": ["backend"],
+      "type": "assets",
+      "source": ["dist/"]
     }
   },
   "defaults": {
     "build": {
-      "args": "",
-      "packtool": ""
+      "packtool": "npm run --silent sources"
     }
   },
   "output_env_file": ".env",
-  "version": 1
+  "version": 2
 }
