@@ -1,6 +1,6 @@
 # DBANK - A Decentralized Bank
 
-DBANK allows Users to top up, withdraw, check balance, and compound interest.
+DBANK allows users to top up, withdraw, check balances, and compound interest.
 
 ## Live Demo:
 
