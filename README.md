@@ -1,8 +1,9 @@
 # DBANK - A Decentralized Bank
 
-This project allows the Users to top up, withdraw, check balance, and compound interest.
+DBANK allows Users to top up, withdraw, check balance, and compound interest.
 
 ## Live Demo:
+
 https://ronaldolipata.github.io/dbank/
 
 ## To run the project
