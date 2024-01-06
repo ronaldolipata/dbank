@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <h1>DBANK - A Decentralized Bank</h1>
-      <span>{loading ? 'loading' : balance}</span>
+      <span>{loading ? 'Checking balance' : balance}</span>
     </div>
   );
 }
