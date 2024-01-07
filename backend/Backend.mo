@@ -4,7 +4,7 @@ import Float "mo:base/Float";
 
 actor DBank {
   stable var balance : Float = 300;
-  stable var starTime = Time.now();
+  stable var startTime = Time.now();
 
   public func deposit(amount : Float) {
     balance += amount;
@@ -28,9 +28,9 @@ actor DBank {
 
   public func compound() {
     let currentTime = Time.now();
-    let timeElapseNS = currentTime - starTime;
+    let timeElapseNS = currentTime - startTime;
     let timeElapseS = timeElapseNS / 1000000000;
     balance := balance * (1.01 ** Float.fromInt(timeElapseS));
-    starTime := currentTime;
+    startTime := currentTime;
   };
 };
