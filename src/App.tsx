@@ -9,8 +9,8 @@ function App() {
   async function checkBalance() {
     try {
       setLoading(true);
-      const data = await backend.checkBalance();
-      setBalance(data);
+      const amount = await backend.checkBalance();
+      setBalance(amount);
     } catch (error) {
       console.error(error);
     } finally {
