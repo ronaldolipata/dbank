@@ -60,6 +60,20 @@ function App() {
     }
   }
 
+  // Function to handle withdrawal button click
+  async function handleWithdrawal() {
+    try {
+      setLoading(true);
+      // Withdraw the amount to the backend
+      await backend.withdraw(amount);
+      checkBalance(); // Refresh balance after withdrawal
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   // Fetch balance on component mount
   useEffect(function () {
     checkBalance();
@@ -77,6 +91,13 @@ function App() {
           type="button"
         >
           Deposit
+        </button>
+        <button
+          disabled={amount <= 0 || loading ? true : false}
+          onClick={handleWithdrawal}
+          type="button"
+        >
+          Withdraw
         </button>
       </form>
     </div>
