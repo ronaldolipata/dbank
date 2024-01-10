@@ -82,7 +82,7 @@ function App() {
   return (
     <div className="App">
       <h1>DBANK - A Decentralized Bank</h1>
-      <span>{loading ? 'Updating balance' : balance}</span>
+      <span>{loading ? 'Updating balance' : `$${balance}`}</span>
       <form>
         <input onChange={handleInput} type="number" />
         <button
