@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import { backend } from './declarations/backend';
 import displayAmountInDollars from './utils/displayAmountInDollars';
+import Button from './components/Button';
 
 function App() {
   const [balance, setBalance] = useState<string>('$0.00'); // Ensure a default value for balance
@@ -85,20 +86,20 @@ function App() {
       <span>{loading ? 'Updating balance' : `$${balance}`}</span>
       <form>
         <input onChange={handleInput} type="number" />
-        <button
+        <Button
+          variant="default"
           disabled={amount <= 0 || loading ? true : false}
           onClick={handleDeposit}
-          type="button"
         >
           Deposit
-        </button>
-        <button
+        </Button>
+        <Button
+          variant="default"
           disabled={amount <= 0 || loading ? true : false}
           onClick={handleWithdrawal}
-          type="button"
         >
           Withdraw
-        </button>
+        </Button>
       </form>
     </div>
   );
