@@ -1,0 +1,39 @@
+// Button styles map
+$button-styles: (
+  default: (
+    bg-color: #e0e0e0,
+    text-color: #333,
+  ),
+  primary: (
+    bg-color: #3498db,
+    text-color: #fff,
+  ),
+  secondary: (
+    bg-color: #2ecc71,
+    text-color: #fff,
+  ),
+);
+
+// Mixin for button styles
+@mixin button-style($style) {
+  background-color: map-get($style, bg-color);
+  color: map-get($style, text-color);
+  padding: 10px 24px;
+  border: none;
+  border-radius: 3px;
+}
+
+// Default button
+.button-default {
+  @include button-style(map-get($button-styles, default));
+}
+
+// Primary button
+.button-primary {
+  @include button-style(map-get($button-styles, primary));
+}
+
+// Secondary button
+.button-secondary {
+  @include button-style(map-get($button-styles, secondary));
+}
