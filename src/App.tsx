@@ -87,14 +87,14 @@ function App() {
       <form>
         <input onChange={handleInput} type="number" />
         <Button
-          variant="default"
+          variant="primary"
           disabled={amount <= 0 || loading ? true : false}
           onClick={handleDeposit}
         >
           Deposit
         </Button>
         <Button
-          variant="default"
+          variant="secondary"
           disabled={amount <= 0 || loading ? true : false}
           onClick={handleWithdrawal}
         >
