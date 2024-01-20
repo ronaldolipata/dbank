@@ -23,17 +23,14 @@ $button-styles: (
   border-radius: 3px;
 }
 
-// Default button
-.button-default {
+.default {
   @include button-style(map-get($button-styles, default));
 }
 
-// Primary button
-.button-primary {
+.primary {
   @include button-style(map-get($button-styles, primary));
 }
 
-// Secondary button
-.button-secondary {
+.secondary {
   @include button-style(map-get($button-styles, secondary));
 }
