@@ -1,0 +1,27 @@
+// Input styles map
+$input-styles: (
+  default: (
+    bg-color: #ffffff,
+    text-color: #333333,
+  ),
+  primary: (
+    bg-color: #3498db,
+    text-color: #ffffff,
+  ),
+);
+
+// Mixin for input styles
+@mixin input-style($style) {
+  background-color: map-get($style, bg-color);
+  padding: 10px 24px;
+  border: 1px solid #333333;
+  border-radius: 3px;
+}
+
+.default {
+  @include input-style(map-get($input-styles, default));
+}
+
+.primary {
+  @include input-style(map-get($input-styles, primary));
+}

@@ -86,7 +86,11 @@ function App() {
       <h1>DBANK - A Decentralized Bank</h1>
       <span>{loading ? 'Updating balance' : `$${balance}`}</span>
       <form>
-        <InputNumber handleInputNumber={handleInputNumber} type="number" />
+        <InputNumber
+          variant="default"
+          handleInputNumber={handleInputNumber}
+          type="number"
+        />
         <Button
           variant="primary"
           disabled={amount <= 0 || loading ? true : false}
