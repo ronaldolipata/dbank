@@ -23,11 +23,7 @@ export default function Button({
   }
 
   return (
-    <button
-      className={`button ${getVariantClass()}`}
-      disabled={disabled}
-      onClick={onClick}
-    >
+    <button className={getVariantClass()} disabled={disabled} onClick={onClick}>
       {children}
     </button>
   );
