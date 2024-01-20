@@ -3,6 +3,7 @@ import './App.css';
 import { backend } from './declarations/backend';
 import displayAmountInDollars from './utils/displayAmountInDollars';
 import Button from './components/Button';
+import InputNumber from './components/InputNumber';
 
 function App() {
   const [balance, setBalance] = useState<string>('$0.00'); // Ensure a default value for balance
@@ -27,7 +28,7 @@ function App() {
   }
 
   // Function to handle input
-  function handleInput(event: React.ChangeEvent<HTMLInputElement>) {
+  function handleInputNumber(event: React.ChangeEvent<HTMLInputElement>) {
     const input = event.target.value;
 
     // Handle empty or invalid input cases
@@ -85,7 +86,7 @@ function App() {
       <h1>DBANK - A Decentralized Bank</h1>
       <span>{loading ? 'Updating balance' : `$${balance}`}</span>
       <form>
-        <input onChange={handleInput} type="number" />
+        <InputNumber handleInputNumber={handleInputNumber} type="number" />
         <Button
           variant="primary"
           disabled={amount <= 0 || loading ? true : false}
